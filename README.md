@@ -1,6 +1,9 @@
 # Grab AI for S.E.A. challenge - Safety
 Given the telematics data for each trip and the label if the trip is tagged as dangerous driving, derive a model that can detect dangerous driving trips.
 
+## Dataset
+The dataset can be found at https://www.aiforsea.com/safety
+
 ## Executive summary
 ### Process data
 First, I merged all sessions and `csv` files for features into a single `dataframe`. For each `bookingID` that has labels of both `safe` and `dangerous`, I removed the `safe` label.
