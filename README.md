@@ -3,9 +3,9 @@ Given the telematics data for each trip and the label if the trip is tagged as d
 
 ## Executive summary
 ### Process data
-First I merged all sessions and `csv` files for features into a single `dataframe`. For each `bookingID` that has labels of both `safe` and `dangerous`, I removed the `safe` label.
+First, I merged all sessions and `csv` files for features into a single `dataframe`. For each `bookingID` that has labels of both `safe` and `dangerous`, I removed the `safe` label.
 ### Preprocessing
-Using `acceleration` and `gyro` features, I did some feature-engineering to come up with `pitch`, `roll`, and others. I then took the summary statistics of each features, such as the `min` and `max` of each feature. I then merged the summary statistics `dataframe` with its respective label.
+Using `acceleration` and `gyro` features, I did some feature-engineering to come up with features such as `pitch`, `roll`, and others. I then took the summary statistics of each feature, such as the `min` and `max` of each feature. I then merged the summary statistics `dataframe` with its respective label.
 ### Model
 I tried running 3 models, starting with `lightgbm`. The highest AUC-ROC for an out-of-fold validation strategy is 0.69767. `gam` and `xgboost` resulted in a lower AUC-ROC.
 
