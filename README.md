@@ -15,4 +15,7 @@ I tried running 3 models, starting with `lightgbm`. The highest AUC-ROC for an o
 
 ## Important takeaways
 0. A feature importance plot can be found at `plots` folder. Some of the most important features to determine whether is a trip safe or dangerous are `Speed_max`, `acceleration_y_mean_abs_change`, `acceleration_z_kurtosis` and others.
-1. There is a "leaked" feature `max_second`, which is the maximum second of each `bookingID`. Adding this feature boosts the AUC-ROC from 0.68 to 0.72. I personally think that this feature has little value from the business or practical point of view if Grab were to deploy the model.
+1. There is a "leaked" feature `max_second`, which is the maximum second of each `bookingID`. Adding this feature boosts the AUC-ROC from 0.68 to 0.72. I personally think that this feature has little value from the business or practical point of view if Grab were to deploy the model. With the caveat that I might be wrong, please feel free to include this feature.
+
+## Acknowledgement
+Thanks to Grab for hosting such an interesting challenge!
