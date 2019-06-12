@@ -12,3 +12,7 @@ I tried running 3 models, starting with `lightgbm`. The highest AUC-ROC for an o
 2. Run `0-process_data.ipynb` to merge all entries into a single dataframe. Save holdout set to `test`.
 3. Run `1-preprocess.ipynb` and uncomment lines with `UNCOMMENT` for holdout set to generate features and aggregate all features based on `bookingID`. Save holdout set to `agg_test`.
 4. Run `2-model.ipynb` and uncomment lines with `UNCOMMENT` for holdout set to generate predictions.
+
+## Important takeaways
+0. A feature importance plot can be found at `plots` folder. Some of the most important features to determine whether is a trip safe or dangerous are `Speed_max`, `acceleration_y_mean_abs_change`, `acceleration_z_kurtosis` and others.
+1. There is a "leaked" feature `max_second`, which is the maximum second of each `bookingID`. Adding this feature boosts the AUC-ROC from 0.68 to 0.72. I personally think that this feature has little value from the business or practical point of view if Grab were to deploy the model.
